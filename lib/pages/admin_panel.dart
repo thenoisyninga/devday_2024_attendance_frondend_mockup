@@ -18,7 +18,7 @@ class _AdminPanelState extends State<AdminPanel> {
             horizontal: MediaQuery.of(context).size.width * 0.05,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // Heading
               SizedBox(
@@ -69,6 +69,37 @@ class _AdminPanelState extends State<AdminPanel> {
               ),
 
               // Table
+              Container(
+                color: Colors.grey[200],
+                height: MediaQuery.of(context).size.height * 0.6,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListView.builder(
+                    itemCount: 50,
+                    itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 100,
+                        width: MediaQuery.of(context).size.width * 0.9 - 16,
+                        color: Colors.grey[300],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text("Sarim Ahmed"),
+                              Text("23k0703"),
+                              Text("App Development"),
+                              Text("Present"),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
